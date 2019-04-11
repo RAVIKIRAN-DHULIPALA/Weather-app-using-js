@@ -1,6 +1,7 @@
 window.addEventListener('load',()=>{
     let long;
     let lat;
+    //declaring the DOM elements
     let temperatureDescription  = document.querySelector('.temperature-description');
     let temperatureDegree  = document.querySelector('.temperature-degree');
     let temperatureDegree1  = document.querySelector('.temperature-degree1');
@@ -9,7 +10,7 @@ window.addEventListener('load',()=>{
     const temperatureSpan = document.querySelector('.temperature span');
     const temperatureSpan1 = document.querySelector('.temp');
 
-
+    // requesting the permission for the location from user
     if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(position=>{
     long = position.coords.longitude;
@@ -33,7 +34,7 @@ window.addEventListener('load',()=>{
     //Formual for celsius
     let celsius = (temperature -32) *(5/9);
     let cel = (apparentTemperature - 32)*(5/9);
-
+    // set the icons
     setIcons(icon,document.querySelector('.icon'));
     temperatureSection.addEventListener('click',()=>{
         if(temperatureSpan.textContent === '°F'){
@@ -52,6 +53,7 @@ window.addEventListener('load',()=>{
 
 }); 
     });
+        //function to set the icons
     function setIcons(icon,iconId){
         const skycons  = new Skycons({color : 'white'});
         const currentIcon = icon.replace(/-/g,"_").toUpperCase();
