@@ -6,3 +6,5 @@ This code should be executed in the server(localhost or any other)
 The weather API used :https://darksky.net/dev
 
 The animating icons :https://darkskyapp.github.io/skycons/
+
+visit skycons website to see how to use the animating icons. download the zip file which contains the skycons.js file and link it to your html so that the animation works perfectly fine.
